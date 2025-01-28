@@ -1,4 +1,7 @@
-package cardGame;
+//Abraham Gonzalez, 
+//Anthony Madrigal-Murillo
+//Cristopher A. Gomez
+//1/28/2025
 
 import java.io.File;
 import java.io.FileNotFoundException;
