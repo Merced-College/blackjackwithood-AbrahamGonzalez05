@@ -79,24 +79,17 @@ public class CardGame {
     public static boolean checkFor2Kind() {
 
         int count = 0;
-
         for (int i = 0; i < playerCards.size() - 1; i++) {
-
             Card current = playerCards.get(i);
-
             for (int j = i + 1; j < playerCards.size(); j++) {
-
                 Card next = playerCards.get(j);
-
                 //System.out.println(" comparing " + current);
                 //System.out.println(" to " + next);
-
                 if (current.equal(next))
                     count++;
             } // end of inner for
             if (count == 1)
                 return true;
-
         } // end outer for
         return false;
     }
@@ -117,5 +110,4 @@ public class CardGame {
         }
         return false;
     }
-
 }// end class
