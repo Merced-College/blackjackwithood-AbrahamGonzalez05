@@ -1,69 +1,68 @@
-public class Card {
-
-    // Data variables
+public class Card{
+    
+    //Data Variables
     private String suit;
     private String rank;
     private int value;
-    private String picName;
+    private String picture;
 
-    // Default constructor
-    public Card() {
+    //default constructor
+    public Card(){
         suit = "heart";
-        rank = "ace";
-        value = 10;
-        picName = "ah.gif";
+        rank = "One";
+        value = 1;
+        picture = "pic.gif";
     }
 
-    // Parameterized constructor
-    public Card(String suit, String rank, int value, String picName) {
+    //initialized constructor
+    public Card(String suit, String rank, int value, String picture){
         this.suit = suit;
         this.rank = rank;
         this.value = value;
-        this.picName = picName;
+        this.picture = picture;
     }
 
-    // Setters and getters
-    public void setSuit(String suit) {
+    //Defining Equals
+    public boolean equal(Card other){
+        return rank.equals(other.rank);
+    }
+
+    //Setters
+    public void setSuit(String suit){
         this.suit = suit;
     }
 
-    public void setRank(String rank) {
+    public void setRank(String rank){
         this.rank = rank;
     }
 
-    public void setValue(int value) {
+    public void setValue(int value){
         this.value = value;
     }
 
-    public void setPicName(String picName) {
-        this.picName = picName;
+    public void setPicture(String picture){
+        this.picture = picture;
     }
 
-    public String getSuit() {
+    //Getters
+    public String getSuit(){
         return suit;
     }
 
-    public String getRank() {
+    public String getRank(){
         return rank;
     }
 
-    public int getValue() {
+    public int getValue(){
         return value;
     }
 
-    public String getPicName() {
-        return picName;
+    public String getPicture(){
+        return picture;
     }
 
-    public String toString() {
-        return "suit: " + suit + ", rank: " + rank + ", value: " + value + ", picName: " + picName;
+    //toString - Returns all varaibles
+    public String toString(){
+        return "suit = " + suit + "; rank = " + rank + "; value = " + value + "; picture = " + picture + ";";
     }
-
-    public boolean equals(Card other) {
-        if (this == other) return true;
-        if (other == null || getClass() != other.getClass()) return false;
-        Card card = (Card) other;
-        return value == card.value && suit.equals(card.suit) && rank.equals(card.rank);
-    }
-    
 }
